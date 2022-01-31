@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,6 +35,13 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
+                Text(
+                  "Welcome $name",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
                 Column(
                   children: [
                     TextFormField(
@@ -37,6 +50,10 @@ class HomePage extends StatelessWidget {
                         label: Text("Enter UsserName"),
                         border: OutlineInputBorder(),
                       ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      },
                     ),
                     SizedBox(
                       height: 30,
