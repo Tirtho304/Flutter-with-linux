@@ -9,45 +9,49 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("HomePage"),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(1.5),
-        child: Center(
-          child: Column(
-            children: [
-              Image.asset(
-                "image/t2.jpg",
-                fit: BoxFit.fill,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                "Login",
-                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Column(
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "Enter  UseeerName",
-                      label: Text("UsserName"),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(1.5),
+          child: Center(
+            child: Column(
+              children: [
+                Image.asset(
+                  "image/t2.jpg",
+                  fit: BoxFit.fill,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "Login",
+                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Column(
+                  children: [
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: " UseeerName",
+                        label: Text("Enter UsserName"),
+                        border: OutlineInputBorder(),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      hintText: "Enter Password",
-                      label: Text("Password"),
+                    SizedBox(
+                      height: 30,
                     ),
-                  )
-                ],
-              )
-            ],
+                    TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Password",
+                        label: Text("Enter Password"),
+                        border: OutlineInputBorder(),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
