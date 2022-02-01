@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:project1/Pages/HomePage.dart';
+import 'package:project1/Pages/Page3.dart';
 import 'package:project1/Pages/StartPage.dart';
 //import 'package:project1/Pages/HomePage.dart';
 //import 'package:project1/Pages/StartPage.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => StartPage(),
         "/Login": (context) => HomePage(),
+        "/2ndpage": (context) => Page3(),
       },
     );
   }

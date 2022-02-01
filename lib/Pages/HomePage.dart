@@ -7,6 +7,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String name = "";
+  bool changeButton = false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -64,9 +65,42 @@ class _HomePageState extends State<HomePage> {
                         label: Text("Enter Password"),
                         border: OutlineInputBorder(),
                       ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    InkWell(
+                      //splashColor: Colors.amber,
+                      onTap: () async {
+                        setState(() {
+                          changeButton = true;
+                        });
+                        await Future.delayed(Duration(seconds: 1));
+                        Navigator.pushNamed(context, "/2ndpage");
+                      },
+                      child: AnimatedContainer(
+                        duration: Duration(seconds: 1),
+                        height: 50,
+                        width: 150,
+                        alignment: Alignment.center,
+                        child: changeButton
+                            ? Icon(Icons.done)
+                            : Text(
+                                "Login",
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                        decoration: BoxDecoration(
+                            color: Colors.deepPurple,
+                            borderRadius:
+                                BorderRadius.circular(changeButton ? 50 : 8)),
+                      ),
                     )
                   ],
-                )
+                ),
               ],
             ),
           ),
