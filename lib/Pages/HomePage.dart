@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                             color: Colors.deepPurple,
                             borderRadius:
-                                BorderRadius.circular(changeButton ? 50 : 8)),
+                                BorderRadius.circular(changeButton ? 100 : 8)),
                       ),
                     )
                   ],
