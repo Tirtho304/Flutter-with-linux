@@ -25,6 +25,8 @@ dependencies:
   liquid_swipe: ^2.1.0
   cloud_firestore: ^2.5.2
   carousel_slider: ^4.0.0
+  form_field_validator: ^1.1.0
+  http: ^0.13.4
  
    
   flutter:
@@ -59,8 +61,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - image/t2.jpg
+    - image/t3.jpg
+    - image/mango.jpg
+    - image/Fiel/Catalog.json
    
-  #   - images/a_dot_ham.jpeg
+ # - images/a_dot_ham.jpeg
    
  
   # An image asset can refer to one or more resolution-specific "variants", see
